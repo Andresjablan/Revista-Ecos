@@ -20,4 +20,4 @@ npm run dev
 
 ---
 
-Si no quieres usar Tailwind puedo convertir las clases a CSS regular o Bootstrap — dime cuál prefieres.
+
