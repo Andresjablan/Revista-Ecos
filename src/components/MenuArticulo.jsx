@@ -26,7 +26,7 @@ export default function GridArticulos() {
           <Link
             key={i}
             to={art.link}
-            className="block bg-white shadow hover:shadow-lg rounded-lg overflow-hidden transition"
+            className="block bg-white shadow hover:shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105"
           >
             <img
               src={art.img}

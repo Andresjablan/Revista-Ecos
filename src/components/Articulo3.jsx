@@ -136,7 +136,7 @@ export default function ArticuloRevistaPreescolar() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
-      <h1 className="text-3xl font-bold text-center mb-10 text-gray-800   "  data-aos="zoom-in-left">
+      <h1 className="text-3xl font-bold text-center mb-10 text-gray-800   ">
         NUESTRAS PEQUEÑAS HISTORIAS
       </h1>
 
@@ -149,8 +149,8 @@ export default function ArticuloRevistaPreescolar() {
             src={sec.imagen}
             alt={sec.titulo}
             className={getImageClasses(sec.posicion, sec.tamano)} data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
           />
           {sec.parrafos.map((p, i) => (
             <p key={i} className="text-justify leading-relaxed mb-4 text-gray-700" >

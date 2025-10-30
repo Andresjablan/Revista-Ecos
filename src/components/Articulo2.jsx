@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 export default function ArticuloDiaTierra() {
   const navigate = useNavigate();
+    useEffect(() => {
+      AOS.init({ duration: 1000, once: true });
+      AOS.refresh(); // refresca AOS para detectar nuevos elementos
+    }, []);
+
+ 
 
   const parrafos = [
     "Cada 22 de abril, millones de personas alrededor del mundo conmemoran el Día de la Tierra, una fecha que nos invita a reflexionar sobre la responsabilidad compartida que tenemos con el cuidado del medio ambiente. Esta celebración, establecida en 1970, ha cobrado creciente relevancia frente a los desafíos que enfrenta nuestro planeta, tales como el cambio climático, la pérdida de biodiversidad, la contaminación del aire y del agua, y la deforestación.",
@@ -22,7 +31,9 @@ export default function ArticuloDiaTierra() {
         <img
           src="/images/Tierra1.jpeg"
           alt="Día de la Tierra"
-          className="md:float-right md:ml-6 md:mb-4 w-full md:w-1/2 rounded-lg shadow"
+          className="md:float-right md:ml-6 md:mb-4 w-full md:w-1/2 rounded-lg shadow" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500"
         />
 
         {parrafos.map((p, i) => (

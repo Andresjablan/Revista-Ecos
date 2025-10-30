@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function ArticuloCronica() {
   const navigate = useNavigate();
+   useEffect(() => {
+      AOS.init({ duration: 1000, once: true });
+      AOS.refresh(); // refresca AOS para detectar nuevos elementos
+    }, []);
 
   const parrafos = [
     "El descanso es una forma de equilibrar la vida, y es la oportunidad para valorar la riqueza, la belleza  y  el esplendor de los pueblos de nuestro país.",
@@ -21,7 +27,9 @@ export default function ArticuloCronica() {
         <img
           src="/images/Cartagena2.jpg"
           alt="Cartagena"
-          className="md:float-right md:ml-6 md:mb-4 w-full md:w-1/2 rounded-lg shadow"
+          className="md:float-right md:ml-6 md:mb-4 w-full md:w-1/2 rounded-lg shadow" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500"
         />
 
         {parrafos.map((p, i) => (
