@@ -1,4 +1,4 @@
-import React from "react"; 
+import React, { useEffect } from "react"; 
 import { Routes, Route } from "react-router-dom";
 
 // Pages
@@ -15,8 +15,16 @@ import Zapping from "./pages/Zapping";
 import ArticuloCronica from "./components/Articulo";
 import ArticuloDiaTierra from "./components/Articulo2";
 import Layout from "./layouts/Layout";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // duración de la animación en ms
+      once: true, // animación solo una vez
+    });
+  }, []);
   return (
     <Routes>
       <Route path="/" element={<Homepage />} />
