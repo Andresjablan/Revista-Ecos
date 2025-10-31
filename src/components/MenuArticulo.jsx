@@ -18,7 +18,7 @@ export default function GridArticulos() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
       <h2 className="text-2xl font-bold mb-8 text-center">
-        Artículos Recientes
+        Ciencia y Literatura
       </h2>
 
       <div className="grid gap-8 md:grid-cols-2">
